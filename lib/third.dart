@@ -1,3 +1,4 @@
+import 'package:firebase/first.dart';
 import 'package:flutter/material.dart';
 class Third extends StatefulWidget {
   const Third({Key? key}) : super(key: key);
@@ -57,8 +58,12 @@ class _ThirdState extends State<Third> {
               child: const Text('Login', style: TextStyle(color: Colors.white)),
             ),
           ),
-          TextButton(onPressed: (){}, child: Text('Already have an account? Login',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),))
+          Center(child: TextButton(onPressed: (){Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const First()),);}, child: Text('Dont have an account? Sign up',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),))),
 
+
+          Center(child: CircleAvatar(backgroundImage: NetworkImage('https://png.pngtree.com/png-vector/20220908/ourmid/pngtree-business-man-holding-key-to-unlock-phone-png-image_6141936.png'),radius: 150,))
         ],
       ),
     );

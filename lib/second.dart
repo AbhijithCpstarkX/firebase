@@ -1,3 +1,5 @@
+import 'package:firebase/first.dart';
+import 'package:firebase/third.dart';
 import 'package:flutter/material.dart';
 class Second extends StatefulWidget {
   const Second({Key? key}) : super(key: key);
@@ -22,7 +24,7 @@ class _SecondState extends State<Second> {
 
             Center(child: Text("Slash Flutter provides extraordinary flutter tutorials.Do Subscribe!",style: TextStyle(color: Colors.black54,fontSize: 20),)),
 
-            SizedBox(height: 15,),
+            SizedBox(height: 30,),
 
           Center(child: CircleAvatar(backgroundImage: NetworkImage('https://media.istockphoto.com/id/687884534/vector/phone-call-button-on-smartphone-screen.jpg?s=612x612&w=0&k=20&c=sgCXODLKY0rGQEKO3aEv74XK2mUE47j1Mhd3SnTFt0s='),radius: 100,)),
             SizedBox(height: 50,),
@@ -32,7 +34,9 @@ class _SecondState extends State<Second> {
                     fixedSize: Size(200, 50),
                     backgroundColor: Colors.blue,
                     textStyle: const TextStyle(fontSize: 20)),
-                onPressed: () {
+                onPressed: () {Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Third()),);
 
                 },
                 child: const Text('Login', style: TextStyle(color: Colors.white)),
@@ -45,7 +49,9 @@ class _SecondState extends State<Second> {
                     fixedSize: Size(200, 50),
                     backgroundColor: Colors.blue,
                     textStyle: const TextStyle(fontSize: 20)),
-                onPressed: () {
+                onPressed: () {Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const First()),);
 
                 },
                 child: const Text('Sign Up', style: TextStyle(color: Colors.white)),

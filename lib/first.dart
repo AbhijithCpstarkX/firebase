@@ -1,3 +1,4 @@
+import 'package:firebase/third.dart';
 import 'package:flutter/material.dart';
 
 class First extends StatefulWidget {
@@ -95,7 +96,9 @@ class _FirstState extends State<First> {
 
             ),
             SizedBox(height: 40,),
-            Center(child: TextButton(onPressed: (){}, child: Text('Already have an account? Login',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),)))
+            Center(child: TextButton(onPressed: (){Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Third()),);}, child: Text('Already have an account? Login',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),)))
           ],
         ),
       ),
